@@ -17,6 +17,10 @@ import Svg, { Path } from 'react-native-svg'
 import Animated, { useAnimatedStyle, withTiming, useDerivedValue } from 'react-native-reanimated'
 // lottie
 import Lottie from 'lottie-react-native'
+import Home from './src/ui/Home'
+import Upload from './src/ui/Upload'
+import Chat from './src/ui/Chat'
+import Settings from './src/ui/Settings'
 
 // ------------------------------------------------------------------
 
@@ -40,7 +44,7 @@ const App = () => {
               // @ts-ignore
               tabBarIcon: ({ ref }) => <Lottie ref={ref} loop={false} source={require('./src/assets/lottie/home.icon.json')} style={styles.icon} />,
             }}
-            component={PlaceholderScreen}
+            component={Home}
           />
           <Tab.Screen
             name="Upload"
@@ -48,7 +52,7 @@ const App = () => {
               // @ts-ignore
               tabBarIcon: ({ ref }) => <Lottie ref={ref} loop={false} source={require('./src/assets/lottie/upload.icon.json')} style={styles.icon} />,
             }}
-            component={PlaceholderScreen}
+            component={Upload}
           />
           <Tab.Screen
             name="Chat"
@@ -56,7 +60,7 @@ const App = () => {
               // @ts-ignore
               tabBarIcon: ({ ref }) => <Lottie ref={ref} loop={false} source={require('./src/assets/lottie/chat.icon.json')} style={styles.icon} />,
             }}
-            component={PlaceholderScreen}
+            component={Chat}
           />
           <Tab.Screen
             name="Settings"
@@ -64,7 +68,7 @@ const App = () => {
               // @ts-ignore
               tabBarIcon: ({ ref }) => <Lottie ref={ref} loop={false} source={require('./src/assets/lottie/settings.icon.json')} style={styles.icon} />,
             }}
-            component={PlaceholderScreen}
+            component={Settings}
           />
         </Tab.Navigator>
       </NavigationContainer>
@@ -74,11 +78,7 @@ const App = () => {
 
 // ------------------------------------------------------------------
 
-const PlaceholderScreen = () => {
-  return (
-    <View style={{ flex: 1, backgroundColor: '#604AE6' }} />
-  )
-}
+
 
 // ------------------------------------------------------------------
 
